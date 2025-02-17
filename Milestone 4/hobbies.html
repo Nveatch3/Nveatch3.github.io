@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="..\css\mysite.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Personal Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="notableplacesmap.html">Notable Places</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="specialevents.html">Special Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="photocollection.html">Photo Collection</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hobbies Section -->
+    <div class="container mt-5 text-center">
+        <h1>My Hobbies</h1>
+        <p>Click on a hobby to learn more about it.</p>
+        
+        <div class="row d-flex flex-wrap justify-content-center">
+            <!-- Hobby 1 -->
+            <div class="col-md-4">
+                <a href="#hobby1" class="text-decoration-none">
+                    <div class="card hobby-card p-3 mb-3 bg-light" data-target="#hobby1">
+                        <h4>🏋️ Weightlifting & Fitness</h4>
+                    </div>
+                </a>
+                <p id="hobby1" class="hobby-description fade-in">I enjoy strength training and tracking progress in my lifts.</p>
+            </div>
+
+            <!-- Hobby 2 -->
+            <div class="col-md-4">
+                <a href="#hobby2" class="text-decoration-none">
+                    <div class="card hobby-card p-3 mb-3 bg-light" data-target="#hobby2">
+                        <h4>🎮 Video Games</h4>
+                    </div>
+                </a>
+                <p id="hobby2" class="hobby-description fade-in">I love competitive and story-driven games, including Valorant and RPGs.</p>
+                <video width="100%" controls>
+                    <source src="/Milestone 4/Media/Val-clip.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <audio controls>
+                    <source src="/Milestone 4/Media/random-thoughts-20586.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+
+            <!-- Hobby 3 -->
+            <div class="col-md-4">
+                <a href="#hobby3" class="text-decoration-none">
+                    <div class="card hobby-card p-3 mb-3 bg-light" data-target="#hobby3">
+                        <h4>⛹️ Sports & Outdoor Activities</h4>
+                    </div>
+                </a>
+                <p id="hobby3" class="hobby-description fade-in">Basketball, running, and hiking are my favorite ways to stay active.</p>
+            </div>
+        </div>
+
+        <!-- Hobby Accomplishments Table -->
+        <h2 class="mt-5">Hobby Accomplishments</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Hobby</th>
+                    <th>Accomplishment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-01-15</td>
+                    <td>Weightlifting</td>
+                    <td>Bench Pressed 225 lbs for 5 reps</td>
+                </tr>
+                <tr>
+                    <td>2023-12-10</td>
+                    <td>Gaming</td>
+                    <td>Reached Platinum Rank in Valorant</td>
+                </tr>
+                <tr>
+                    <td>2023-11-05</td>
+                    <td>Running</td>
+                    <td>Completed first 5K race</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // jQuery for hiding/showing hobbies with animation
+        $(document).ready(function() {
+            $('.hobby-card').click(function() {
+                let target = $(this).data('target');
+                $(target).slideToggle();
+            });
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
